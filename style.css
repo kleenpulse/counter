@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@200;300;400;500&family=Rajdhani:wght@300;400;500&display=swap");
+
+* {
+	user-select: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+body {
+	background: #eeeeee;
+}
+.app {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title{
+  position: absolute;
+  top: 10px;
+}
+.title p{
+  font-family: rajdhani;
+  font-size: 1.4rem;
+	letter-spacing: 3px;
+	color: transparent;
+	font-weight: 900;
+	text-shadow: 1px 1px 1px rgba(243, 243, 243, 0.822);
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-color: #575757;
+	text-transform: uppercase;
+}
+
+.count {
+	font-size: 2.2rem;
+	font-family: rajdhani;
+	letter-spacing: 3px;
+	color: transparent;
+	font-weight: 900;
+	text-shadow: 1px 1px 1px rgba(243, 243, 243, 0.822);
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-color: #575757;
+	text-transform: uppercase;
+}
+
+.btns {
+	margin-top: 2rem;
+	text-align: center;
+	width: 100%;
+  padding: 1rem 0;
+}
+
+.btn {
+	border-radius: 10px;
+	font-family: rajdhani;
+	font-weight: bold;
+	font-size: 80px;
+	color: transparent;
+	font-weight: 900;
+	text-shadow: 1px 1px 1px rgba(243, 243, 243, 0.822);
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-color: #575757;
+	outline: none;
+	padding: 0px 2.4rem;
+	border: none;
+	box-shadow: -5px -5px 10px #fff, 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+	box-shadow: -10px -10px 20px #fff, 10px 10px 20px rgba(0, 0, 0, 0.2);
+	padding: 1rem;
+  width: 320px;
+	border-radius: 15px;
+}
+
+.foo{
+  position: absolute;
+  bottom: 10px;
+}
+.foo p{
+  font-family: rajdhani;
+	letter-spacing: 3px;
+	color: transparent;
+	font-weight: 900;
+	text-shadow: 1px 1px 1px rgba(243, 243, 243, 0.822);
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-color: #575757;
+	text-transform: uppercase;
+}
