@@ -31,15 +31,17 @@ function minusCounter() {
 
   clearInterval(timerId)
   timerId = null
-  addBtn.textContent = '-'
   if (count > 0) {
+    addBtn.textContent = '-'
     minusId = setInterval(function () {
       count--
       countTxt.textContent = `decreasing: ${count}`
-      
+
       if (count < 1) {
         clearInterval(minusId)
         countTxt.textContent = `count: ${count}`
+        addBtn.textContent = '+'
+
       }
     }, (pressDuration + 5))
   }
@@ -50,12 +52,20 @@ addBtn.ontouchend = function () {
 
 
 addBtn.addEventListener('mousedown', function (e) {
-  this.textContent = '+'
   e.preventDefault();
+  if (e.button === 0) {
+    this.textContent = '+'
 
-  addCounter()
+    addCounter()
+  }
 }, false);
 
 addBtn.onmouseup = function () {
- minusCounter()
+  minusCounter()
+}
+addBtn.onmousemove = function () {
+  window.clearInterval(timerId)
+}
+addBtn.ontouchmove = function () {
+  window.clearInterval(timerId)
 }
