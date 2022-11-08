@@ -35,7 +35,7 @@ body {
 }
 
 .count {
-	font-size: 2.2rem;
+	font-size: 2rem;
 	font-family: rajdhani;
 	letter-spacing: 3px;
 	color: transparent;
@@ -67,6 +67,7 @@ body {
 	background-color: #575757;
 	outline: none;
 	padding: 0px 2.4rem;
+	cursor: pointer;
 	border: none;
 	box-shadow: -5px -5px 10px #fff, 5px 5px 10px rgba(0, 0, 0, 0.2);
 }

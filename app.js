@@ -6,7 +6,7 @@ let timerId
 let minusId
 let pressDuration = 5
 
-countDisplay.textContent = count
+
 addBtn.onclick = function () {
   count++
 }
@@ -23,8 +23,11 @@ function addCounter() {
   clearInterval(minusId)
   timerId = setInterval(function () {
     count++
-    countTxt.textContent = `counting: ${count}`
-    // countDisplay.textContent = count
+    if( count >= 20000){
+      clearInterval(timerId)
+    }
+    countTxt.textContent = `counting....: ${count}`
+    
   }, pressDuration)
 }
 function minusCounter() {
@@ -39,7 +42,7 @@ function minusCounter() {
 
       if (count < 1) {
         clearInterval(minusId)
-        countTxt.textContent = `count: ${count}`
+        countTxt.textContent = `count: zero`
         addBtn.textContent = '+'
 
       }
@@ -62,10 +65,4 @@ addBtn.addEventListener('mousedown', function (e) {
 
 addBtn.onmouseup = function () {
   minusCounter()
-}
-addBtn.onmousemove = function () {
-  window.clearInterval(timerId)
-}
-addBtn.ontouchmove = function () {
-  window.clearInterval(timerId)
 }
