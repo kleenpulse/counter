@@ -17,19 +17,19 @@ setTimeout(() => {
 }, 3000);
 
 addBtn.addEventListener('touchstart', addCounter, false);
-document.body.onmouseleave = function(){
+document.body.onmouseleave = function () {
   window.clearTimeout(dynamicTimer)
 
   dynamicIsland.classList.remove('hidden')
   dynamicTxt.textContent = 'Bye!'
- bodyTimer = setTimeout(function () {
+  bodyTimer = setTimeout(function () {
     dynamicIsland.classList.add('hidden')
-  },2000)
+  }, 2000)
 }
 document.body.onmouseenter = function () {
   window.clearTimeout(dynamicTimer)
   window.clearTimeout(bodyTimer)
-document.getElementById('check').style.display = 'none'
+  document.getElementById('check').style.display = 'none'
   dynamicIsland.classList.remove('hidden')
   dynamicTxt.textContent = 'welcome back!'
   bodyTimer = setTimeout(function () {
@@ -51,7 +51,7 @@ function addCounter() {
     if (count >= 20000) {
       clearInterval(timerId)
       dynamicTxt.textContent = 'Max reached'
-     dynamicTimer = setTimeout(function () {
+      dynamicTimer = setTimeout(function () {
         countTxt.textContent = `Max reached: 20k`
         dynamicIsland.classList.remove('hidden')
 
